@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cinnalovers - Suscribite</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+            <img src="images/cinnalovers-01.jpg" id="logo">
+            <div class="tituloUno">
+                <h1>CINNALOVERS</h1>
+            </div>
+        <!--Flotante de whatsapp-->
+        <div>
+            <a href="https://wa.link/gijm8v"class="wsapp">
+                <img src="images/whatsapp-2.png" alt="Pedir por whatsapp" class="wsapp">
+            </a>
+        </div>
+        </header>
+        <nav id="navegador">
+            <!--Botón abrir/cerrar solo mobile-->
+            <div class="controlMenu">
+                <a href="#navegador" class="open">
+                    <img src="images/openIcon.png" alt="Abrir menu">
+                </a>
+                <a href="#" class="close">
+                    <img src="images/closeIcon.png" alt="Cerrar menu">
+                </a>
+            </div>
+                <!--menú principal-->
+            <ul class="navegador__lista">
+                <li class="navegador__item"><a href="index.html">Inicio</a></li>
+                <li class="navegador__item"><a href="menu.html">Menú</a></li>
+                <li class="navegador__item"><a href="comoPedir.html">Cómo pedir?</a></li>
+                <li class="navegador__item"><a href="sobreNosotros.html">Sobre nosotros</a></li>
+                <li class="navegador__item"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="contacto">
+                <div class="backgroundContacto">
+                        <!--background del formulario-->
+                </div>
+                <div class="contactoForm">
+                    <fieldset>
+                        <legend>Suscríbete a nuestro mailing!</legend>
+                        <form action="server.php" method="GET">
+                        <label for="mail">Ingresa tu mail:</label>
+                        <input type="email" placeholder="AguanteElSpam@tumail.com">
+                        <br>
+                        <input type="submit">
+                    </fieldset>        
+                </div>
+            </section>
+        </main>
+        <footer>
+            <h3 class="titulosFooter">Redes</h3>
+                <!--Redes-->
+            <nav>    
+                <ul>
+                    <li><a href="https://www.instagram.com/cinnalovers/">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@cinnalovers.arg">TikTok</a></li>
+                    <li><a href="https://www.facebook.com/Cinnaloverss">Facebook</a></li>
+                </ul>
+            </nav>
+                <!--Suscribite al newsletter-->
+                <h3 class="titulosFooter">Keep in touch!</h3>
+                    <p class="cajaMailing">
+                    Para mantenerte informado acerca de promos, nuevos toppings y productos 
+                    <a href="suscribiteForm.html">sucribite a nuestro mailing haciendo click <span>acá!</span></a>
+                    </p>
+                <h3 id="copyright">Copyright ® 2021 / CINNALOVERS</h3> 
+        </footer>
+    </body>
+</html>

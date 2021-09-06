@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Cinnalovers - Contacto</title>
+        <link rel="stylesheet" href="estilos.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <header>
+                <img src="images/cinnalovers-01.jpg" id="logo">
+                <div class="tituloUno">
+                    <h1>CINNALOVERS</h1>
+                </div>
+            <!--Flotante de whatsapp-->
+            <div>
+                <a href="https://wa.link/gijm8v"class="wsapp">
+                    <img src="images/whatsapp-2.png" alt="Pedir por whatsapp" class="wsapp">
+                </a>
+            </div>
+        </header>
+        <nav id="navegador">
+            <!--Botón abrir/cerrar solo mobile-->
+            <div class="controlMenu">
+                <a href="#navegador" class="open">
+                    <img src="images/openIcon.png" alt="Abrir menu">
+                </a>
+                <a href="#" class="close">
+                    <img src="images/closeIcon.png" alt="Cerrar menu">
+                </a>
+            </div>
+                <!--menú principal-->
+            <ul class="navegador__lista">
+                <li class="navegador__item"><a href="index.html">Inicio</a></li>
+                <li class="navegador__item"><a href="menu.html">Menú</a></li>
+                <li class="navegador__item"><a href="comoPedir.html">Cómo pedir?</a></li>
+                <li class="navegador__item"><a href="sobreNosotros.html">Sobre nosotros</a></li>
+                <li class="navegador__item navegador__item--activo"><a href="contacto.html">Contacto</a></li>
+            </ul>
+        </nav>
+        <main>
+            <section class="contacto">
+                <!-- BACKGROUND DE CONTACTO POR SI CAMBIO DE OPINION 
+                    <div class="backgroundContacto">
+                </div> 
+            -->
+                <div class="contactoForm">
+                    <fieldset>
+                        <legend>Contáctanos!</legend>
+                        <form action="server.php" method="GET">
+                        <label for="username">Nombre</label>
+                        <input type="text" placeholder="Ingresa tu nombre" id="username">
+                            <br>
+                        <label for="mail">Mail</label>
+                        <input type="email" placeholder="Mail" id="mail">
+                            <br>
+                        <label for="numero">Número</label>
+                        <input type="number" placeholder="Número" id="numero">
+                            <br>
+                        <textarea name="" id="" cols="30" rows="10" placeholder="Tu mensaje aquí!"></textarea>
+                    
+                        <h4 class="titulosForm">Desea recibir newsletter?</h4>
+                        <input type="checkbox">
+                        <h4 class="titulosForm">Selecciona tu topping favorito:</h4>
+                        <select name="topping" id="topping">  
+                        <option value="1">Clásico</option>
+                        <option value="2">DDL</option>
+                        <option value="3">Chocolate</option>
+                        <option value="4">Nutella</option>
+                        <option value="5">Salted Caramel & Pecans</option>
+                        <option value="6">Frutos Rojos</option>
+                        <option value="7">Snickers</option>
+                        <option value="8">Manzana</option>
+                        </select>
+                        <input type="submit" value="Enviar!" id="submit">
+                        <input type="reset" value="Restablecer">
+                    </fieldset>
+                </div>
+            </section>
+        </main> 
+        <footer>
+            <h3 class="titulosFooter">Redes</h3>
+                <!--Redes-->
+            <nav>    
+                <ul>
+                    <li><a href="https://www.instagram.com/cinnalovers/">Instagram</a></li>
+                    <li><a href="https://www.tiktok.com/@cinnalovers.arg">TikTok</a></li>
+                    <li><a href="https://www.facebook.com/Cinnaloverss">Facebook</a></li>
+                </ul>
+            </nav>
+                <!--Suscribite al newsletter-->
+                <h3 class="titulosFooter">Keep in touch!</h3>
+                    <p class="cajaMailing">
+                    Para mantenerte informado acerca de promos, nuevos toppings y productos 
+                    <a href="suscribiteForm.html">sucribite a nuestro mailing haciendo click <span>acá!</span></a>
+                    </p>
+                <h3 id="copyright">Copyright ® 2021 / CINNALOVERS</h3> 
+        </footer>
+    </body>
+</html>
