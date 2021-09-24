@@ -77,8 +77,8 @@ h1{
 }
   /*fin boton*/
 a{
-    text-decoration: none;
-    color: whitesmoke;
+    text-decoration: none !important;
+    color: whitesmoke !important;
 }
 
 #navegador{
@@ -106,6 +106,7 @@ a{
 
 ul{
     list-style: none;
+    padding: 0 !important;
 }
 
 /* Cosito flotante de whatsapp*/
@@ -552,11 +553,10 @@ input{
         justify-content: space-around;
         padding-top: 5px;
         padding-bottom: 5px;
-        height: 30px;
+        height: 40px;
     }
     .navegador__item{
         width: 200px;
-        padding-top: 3px;
     }
 
     /* Cosito flotante de whatsapp*/
