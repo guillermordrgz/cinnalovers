@@ -3,110 +3,19 @@
     padding: 0;
     font-family: 'Montserrat', sans-serif;
 }
-html{
-    font-size: 50%
-}
 body{
     background-color: white;
 }
 /* HEADER */
 header{
-    display: grid;
-    grid-template-columns: 33% 67%;
-    grid-template-rows: 100%;
-    grid-template-areas: "logo titulo";
-    background-color: black;
     padding-top: 5px;
     padding-bottom: 5px;
-    overflow:auto;
-    align-items: center;
-    justify-items: center;
-    height: 100px;
 }
-
 #logo{
-    width: 85px;
-    height: 85px;
-    border-radius: 50%;
-    grid-area: logo;
+    max-width: 80px;
 }
-.tituloUno{
-    height: 100%;
-    width: 100%;
-    grid-area: titulo;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-}
-h1{
-    color: whitesmoke;
-    font-size: 3rem;
-}
-
-/* barra de navegacion principal */
-
-   /*boton abrir cerrar*/
-.controlMenu{
-    padding-top: 5px;
-    padding-bottom: 5px;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-}
-.controlMenu img{
-    height: 20px;
-    border-radius: 50%;
-    opacity: 1
-}
-.controlMenu img:hover{
-    opacity: 0.3;
-}
-#navegador:target .navegador__lista{
-    height: 160px;
-    transition: height 0.4s ease-in-out 0s;
-}
-.close{
-    display: none;
-}
-#navegador:target .open{
-    display: none;
-}
-#navegador:target .close{
-    display: block;
-}
-  /*fin boton*/
-a{
-    text-decoration: none !important;
-    color: whitesmoke !important;
-}
-
-#navegador{
-    font-size: 1.25rem;
-    background-color: rgb(15, 15, 15);
-    position: sticky;
-    top: 0;
-    z-index: 9;
-}
-.navegador__lista{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-around;
-    height: 0;
-    overflow: hidden;
-    transition: height 0.4s ease-in-out 0s;
-}
-.navegador__item{
-    text-align: center;
-}
-.navegador__item--activo{
-    background-color: rgb(40, 40, 40);
-    background-size: cover;
-}
-
-ul{
-    list-style: none;
-    padding: 0 !important;
+#header{
+    font-weight: 600!important;
 }
 
 /* Cosito flotante de whatsapp*/
@@ -138,68 +47,25 @@ ul{
     background-size: cover;
     background-position: center;
 }
-#transparenciaBanner{
-    position: absolute;
-    width: 100%;
-    background-color: rgba(255, 255, 255, 0.521);
-}
-#textoBanner{
-    position: absolute;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    display: flex;
-    flex-flow: row nowrap;
-    align-items: center;
-    justify-content: center;
-}
-.tituloIndex{
-    color: black;
-    font-size: 2.88rem;
-}
 
-.sloganIndex{
-    color: #4c4c4e;
-    text-align: center;
-    font-size: 1.875rem;
-    font-weight: 600;
-}
 /*segundo box del index*/
 
 #segundoBoxIndex{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 220px 150px 220px;
-    grid-template-areas:"fotoUno"
-                        "comentario"
+    grid-template-rows: 7fr 3fr;
+    grid-template-areas:"comentario"
                         "fotoDos";
     align-items: center;
     justify-items: center;
     overflow: hidden;
 }
 
-#comentarioIndex{
-    text-align: center;
+#cardIndex{
     grid-area: comentario;
-    width: 60%;
-    border-top-style: solid;
-    border-bottom-style: solid;
-    border-color: #4c4c4e;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    height: 130px;
-    font-size: 1.3rem;
-}
-#comentarioIndex h2{
-    font-size: 2.5rem;
 }
 #fotoUno{
-    grid-area: fotoUno;
-    width: 160px;
-    border-radius: 20%;
+    width: 180px;
 }
 #fotoDosTres{
     grid-area: fotoDos;
@@ -210,15 +76,12 @@ ul{
 }
 #fotoDesktop{
     width: 0;
-    border-radius: 20%;
 }
 #fotoDos{
     width: 40%;
-    border-radius: 20%;
 }
 #fotoTres{
     width: 40%;
-    border-radius: 20%;
 }
 #linkSinEstilo{
     color: black;
@@ -265,7 +128,7 @@ ul{
     height: 200px;
     width: 200px;
     border-radius: 50%;
-    transition: height 1s width 1s;
+    transition: height 1s width 1s; 
 }
 #toppingUno{
     grid-area: f1;
@@ -527,36 +390,9 @@ input{
     html{
         font-size: 100%;
     }
-    header{
-        grid-template-columns: 15% 85%;
-        padding-top: 10px;
-        padding-bottom: 10px;
-        align-items: center;
-        justify-items: center;
-        height: 160px;
-    }
-    
+    /*header*/
     #logo{
-        width: 150px;
-        height: 150px;
-    }
-    .tituloUno{
-        align-items: center;
-        justify-content: flex-start;
-    }
-    /*NAV BAR*/
-    .controlMenu{
-        display: none;
-    }
-    .navegador__lista{
-        flex-flow: row nowrap;
-        justify-content: space-around;
-        padding-top: 5px;
-        padding-bottom: 5px;
-        height: 40px;
-    }
-    .navegador__item{
-        width: 200px;
+        max-width: 150px;
     }
 
     /* Cosito flotante de whatsapp*/
@@ -569,30 +405,24 @@ input{
     /*INDEX*/
     .bannerContainer{
         margin-top: 40px;
-        height: 480px;
+        height: 400px;
     }
     /*SEGUNDO BOX INDEX*/
     #segundoBoxIndex{
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 400px 500px;
-        grid-template-areas:"comentario fotoUno"
+        grid-template-rows: 300px 500px;
+        grid-template-areas:"comentario comentario"
                             "fotoDos fotoDos";
         align-items: center;
         justify-items: center;
     }
-    #comentarioIndex{
-        height: 70%;
-        width: 70%;
-    }
+
     #fotoDosTres{
         height: 100%;
         justify-content: space-around;
         align-items: center;
         width: 100% ;
     }
-    #fotoUno{
-        width: 45%;
-        }
     #fotoDos{
         width: 300px;
         }
@@ -605,13 +435,13 @@ input{
     /*GRID TOPPINGS*/
     .textosTopping{
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-rows: 220px 300px;
         grid-template-areas: 
         "f1 f2 f3 f4"
         "t1 t2 t3 t4";
-        align-items: flex-start;
         grid-row-gap: 10px;
         margin-bottom: 20px;
+        align-items: flex-start;
     }
     .textosTopping__bloque--tercero h3{
         font-size: 1.8rem;
