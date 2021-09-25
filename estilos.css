@@ -87,28 +87,12 @@ header{
     color: black;
 }
 
-/*box de toppings index*/
-.tituloPa{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    height: 70px;
-    margin-bottom: 15px;
-    margin-top: 15px;
-}
-.tituloHi{
-    width: 60%;
-    font-size: 2rem;
-    border-bottom-style: solid;
-    border-top-style: solid;
-    border-color: #4c4c4e;
-}
+/*NUESTROS TOPPINGS*/
+
 .textosTopping{
     display: grid;
     grid-template-columns: 100%;
-    grid-template-rows: 2fr 1fr 2fr 1fr 2fr 1fr 2fr 1fr;
+    grid-template-rows: repeat(16, 160px) ;
     grid-template-areas: 
     "f1"
     "t1"
@@ -117,7 +101,16 @@ header{
     "f3"
     "t3"
     "f4"
-    "t4";
+    "t4"
+    "f5"
+    "t5"
+    "f6"
+    "t6"
+    "f7"
+    "t7"
+    "f8"
+    "t8";
+    grid-row-gap: 5px;
     align-items: center;
     justify-items: center;
     overflow: hidden;
@@ -125,10 +118,8 @@ header{
     text-align: center;
 }
 .textosTopping img{
-    height: 200px;
-    width: 200px;
+    width: 150px;
     border-radius: 50%;
-    transition: height 1s width 1s; 
 }
 #toppingUno{
     grid-area: f1;
@@ -142,12 +133,17 @@ header{
 #toppingCuatro{
     grid-area: f4;
 }
-.textosTopping__bloque{
-    width: 60%;
-    font-size: 1.5rem;
+#toppingCinco{
+    grid-area: f5;
 }
-.textosTopping__bloque h3{
-    font-size: 2rem;
+#toppingSeis{
+    grid-area: f6;
+}
+#toppingSiete{
+    grid-area: f7;
+}
+#toppingOcho{
+    grid-area: f8;
 }
 .textosTopping__bloque--primero{
     grid-area: t1;
@@ -161,29 +157,44 @@ header{
 .textosTopping__bloque--cuarto{
     grid-area: t4;
 }
-/*aqui empieza el footer*/
+.textosTopping__bloque--quinto{
+    grid-area: t5;
+}
+.textosTopping__bloque--sexto{
+    grid-area: t6;
+}
+.textosTopping__bloque--sept{
+    grid-area: t7;
+}
+.textosTopping__bloque--oct{
+    grid-area: t8;
+}
 
-footer{
-    background-color: rgb(0, 0, 0);
-    padding-left: 15px;
-}
-.titulosFooter{
-    font-size: 1.25rem;
-    color: whitesmoke;
-}
-footer nav{
-    font-size: 0.93rem;
-}
-.cajaMailing{
-    color:whitesmoke;
-    width: 30%;
-}
+
 span{
     text-decoration: underline;
 }
 
 #pedidosEspeciales{
     color:black;
+}
+
+
+/*aqui empieza el footer*/
+
+.titulosFooter{
+    color: whitesmoke;
+}
+
+footer{
+    background-color: rgb(0, 0, 0);
+    padding-left: 15px;
+    padding-top: 10px;
+}
+
+.cajaMailing{
+    color:whitesmoke;
+    width: 30%;
 }
 #copyright{
     text-align: center;
@@ -192,35 +203,6 @@ span{
     color: whitesmoke;
     padding-bottom: 10px;
 }
-/*MENU*/
-.contenedorMenu{
-    display: flex;
-    flex-flow: row, nowrap;
-    justify-content: center;
-}
-#tablaMenu{
-    background-color:rgb(202, 165, 138) ;
-    color: whitesmoke;
-    border-color: black;
-    border-style: solid;
-    border-width: 3px;
-    border-collapse: collapse;
-}
-th{
-    text-align: left;
-    padding-left: 5px;
-    padding-right: 5px;
-}
-td{
-    padding-left: 5px;
-    padding-right: 5px;
-}    
-.tablaOsc{
-    background-color: rgb(202, 165, 138)
-}
-.tablaCla{
-    background-color: rgb(175, 132, 100);
-}
 #pedidosEspeciales{
     margin-bottom: 25px;
     text-align: center;
@@ -228,21 +210,17 @@ td{
 #pedidosAca{
     color: black;
 }
-
+ul{
+    list-style: none;
+    padding-left: 0;
+}
+ul a{
+    color: whitesmoke;
+    text-decoration: none;
+}
 
 /*COMO PEDIR*/
-.parrafosCentrados{
-    text-align: center;
-    width: 100%;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 25px;
-}
-.parrafosCentrados p{
-    width: 50%;
-}
+
 #grillaPasos{
     display: grid;
     grid-template-columns: repeat(2, 1fr);
@@ -281,93 +259,15 @@ td{
     font-size: 1.6rem;
 }
 /*SOBRE NOSOTROS*/
-.grid{
-    display: grid;
-    grid-template-columns: repeat(15%*5);
-    grid-template-rows: 50% 50%;
-    grid-template-areas: "foto1 foto2 foto3 foto4 foto5"
-                         "foto6 foto7 foto8 foto9 foto10";
-    grid-column-gap: 10px;
-    grid-row-gap: 10px;
-    justify-items: center;
-    align-items: center;
-    margin-bottom: 200px;
-                        }
-#fotoGaleria1{
-    grid-area: foto1;
-    height: auto;
+.carousel-item{
+    max-height: 600px;
+    max-width: 400px;
 }
-#fotoGaleria2{
-    grid-area: foto2;
-    height: auto;
+.carousel-inner{
+    max-width: 400px;
 }
-#fotoGaleria3{
-    grid-area: foto3;
-    height: auto;
-}
-#fotoGaleria4{
-    grid-area: foto4;
-    height: auto;
-}
-#fotoGaleria5{
-    grid-area: foto5;
-    height: auto;
-}
-#fotoGaleria6{
-    grid-area: foto6;
-    height: auto;
-}
-#fotoGaleria7{
-    grid-area: foto7;
-    height: auto;
-}
-#fotoGaleria8{
-    grid-area: foto8;
-    height: auto;
-}
-#fotoGaleria9{
-    grid-area: foto9;
-    height: auto;
-}
-#fotoGaleria10{
-    grid-area: foto10;
-    height: auto;
-}
-
 /*CONTACTO*/
-.contacto{
-    margin-top: 25px;
-    display: inline-block;
-    position: relative;
-    left: 33%;
-    margin-bottom: 50px;
-}
-legend{
-    font-size: 1.25rem;
-    font-weight: bold;
-    padding-right: 5px;
-    padding-left: 5px;
-}
-.contactoForm{
-    background-color: #4c4c4e;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
-    padding-right: 10px;
-    border-radius: 20px;
-}
-fieldset{
-    position: relative;
-    width: 400px;    
-    border-style: none;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    padding-left: 15px;
-    padding-right: 15px;
-    font-weight: 600;
-    color: whitesmoke;
-    text-align: center;
-}
+
 .titulosForm{
     font-weight: 600;
 }
@@ -385,7 +285,29 @@ input{
 }
 
 /*MEDIA QUERIES*/
-
+@media only screen and (min-width:768px){
+    .textosTopping{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 200px 100px 200px 100px 200px 100px 200px 100px ;
+        grid-template-areas: 
+        "f1 f2"
+        "t1 t2"
+        "f3 f4"
+        "t3 t4"
+        "f5 f6"
+        "t5 t6"
+        "f7 f8"
+        "t7 t8";
+        grid-row-gap: 10px;
+        margin-bottom: 20px;
+        align-items: flex-start;
+    }
+    .textosTopping img{
+        height: 200px;
+        width: 200px;
+    }
+}
 @media only screen and (min-width:1024px) {
     html{
         font-size: 100%;
@@ -435,16 +357,18 @@ input{
     /*GRID TOPPINGS*/
     .textosTopping{
         grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: 220px 300px;
+        grid-template-rows: 220px 130px 220px 130px;
         grid-template-areas: 
         "f1 f2 f3 f4"
-        "t1 t2 t3 t4";
+        "t1 t2 t3 t4"
+        "f5 f6 f7 f8"
+        "t5 t6 t7 t8";
         grid-row-gap: 10px;
         margin-bottom: 20px;
-        align-items: flex-start;
+        align-items: center;
     }
-    .textosTopping__bloque--tercero h3{
-        font-size: 1.8rem;
+    .textosTopping img{
+        transition: height 1s width 1s; 
     }
     .textosTopping img:hover{
         height: 220px;

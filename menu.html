@@ -5,20 +5,22 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Cinnalovers - Menú </title>
-        <link rel="stylesheet" href="estilos.css">
+
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <link rel="stylesheet" href="estilos.css">
     </head>
     <body>
         <header class="bg-black">
             <div class="container-fluid">
                 <div class="row">
-                    <div class="col-4 col-lg-2 d-flex justify-content-center">
+                    <div class="col-3 col-lg-2 d-flex justify-content-center">
                         <a href="index.html"><img class="img-fluid rounded-circle" src="images/cinnalovers-01.jpg" id="logo"></a>
                     </div>
-                    <div class="col-8 col-lg-10 d-flex align-items-center">
+                    <div class="col-9 col-lg-10 d-flex align-items-center">
                             <h1 class="display-6 text-white" id="header">CINNALOVERS</h1>
                     </div>
                 </div>
@@ -52,107 +54,51 @@
             </div>
         </nav>
         <main>
-            <div class="tituloPa">
-                <div class="tituloHi">
-                    <h2>Nuestros toppings:</h2>
-                </div>
+            <div class="container text-center my-5" data-aos="fade-down">
+                    <h5 class="fw-bolder display-6">NUESTROS TOPPINGS</h5>
             </div>
             <section class="textosTopping">
-                <img src="images/toppingClasico.jpg" alt="topping clasico" id="toppingUno">
-                <img src="images/toppingFrutos.jpg" alt="topping frutos rojos" id="toppingDos">
-                <img src="images/toppingPecan.jpg" alt="topping caramel pecans" id="toppingTres">
-                <img src="images/toppingNutella.jpg" alt="topping nutella" id="toppingCuatro">
-                <div class="textosTopping__bloque textosTopping__bloque--primero">
+                <img src="images/toppings/toppingClasico.jpg" alt="topping clasico" id="toppingUno">
+                <img src="images/toppings/toppingFrutos.jpg" alt="topping frutos rojos" id="toppingDos">
+                <img src="images/toppings/toppingPecan.jpg" alt="topping caramel pecans" id="toppingTres">
+                <img src="images/toppings/toppingNutella.jpg" alt="topping nutella" id="toppingCuatro">
+                <div class="container textosTopping__bloque--primero">
                     <h3>Clásico</h3>
                     <p>Frosting (Glaseado dulce a base de queso crema)</p>
                 </div>
-                <div class="textosTopping__bloque textosTopping__bloque--segundo">
+                <div class="container textosTopping__bloque--segundo">
                     <h3>Frutos Rojos</h3>
                     <p>Frosting + Mermelada casera de frutos rojos</p>
                 </div>
-                <div class="textosTopping__bloque textosTopping__bloque--tercero">
+                <div class="container textosTopping__bloque--tercero">
                     <h3>Salted Caramel & Pecans</h3>
                     <p>Frosting + Caramelo salado con nueces pecan</p>
                 </div>
-                <div class="textosTopping__bloque textosTopping__bloque--cuarto">
+                <div class="container textosTopping__bloque--cuarto">
                     <h3>Nutella®</h3>
                     <p>Frosting + Crema de avellanas</p>
                 </div>
-            </section>     
-            <div class="tituloPa">
-                <div class="tituloHi">
-                    <h2>Menú</h2>
+
+                <img src="images/toppings/toppingManzana.jpg" alt="topping Manzana" id="toppingCinco">
+                <img src="images/toppings/toppingChoco.jpg" alt="topping chocolate" id="toppingSeis">
+                <img src="images/toppings/toppingDulce.jpg" alt="topping dulce de leche" id="toppingSiete">
+                <img src="images/toppings/toppingSnicker.jpg" alt="topping Snicker" id="toppingOcho">
+                <div class="container textosTopping__bloque--quinto">
+                    <h3>Manzana</h3>
+                    <p>Frosting + Dulce casero de manzanas y canela</p>
                 </div>
-            </div>
-            <div class="contenedorMenu">
-                <table id="tablaMenu">
-                    <tr class="tablaOsc">
-                        <th><!--Celda en blanco--></th>
-                        <th>Pack x6 minis</th>
-                        <th>Maxi-roll</th>
-                        <th>Mini-cake</th>
-                        <th>Cinnacake</th>
-                    </tr>
-                    <tr class="tablaCla">
-                        <th>Clásico</th>
-                        <td>900</td>
-                        <td>180</td>
-                        <td>800</td>
-                        <td>1300</td>
-                    </tr>
-            
-                    <tr class="tablaOsc">
-                        <th>DDL</th>
-                        <td>430</td>
-                        <td>210</td>
-                        <td>880</td>
-                        <td>1450</td>
-                    </tr>
-                    <tr class="tablaCla">
-                        <th>Chocolate</th>
-                        <td>430</td>
-                        <td>210</td>
-                        <td>880</td>
-                        <td>1450</td>
-                    </tr>
-                    <tr class="tablaOsc">
-                        <th>Frutos Rojos</th>
-                        <td>430</td>
-                        <td>220</td>
-                        <td>950</td>
-                        <td>1600</td>
-                    </tr>
-                    <tr class="tablaCla">
-                        <th>Manzana</th>
-                        <td>430</td>
-                        <td>220</td>
-                        <td>950</td>
-                        <td>1600</td>            
-                    </tr>
-                    <tr class="tablaOsc">
-                        <th>Salted Caramel & Pecans</th>
-                        <td>430</td>
-                        <td>220</td>
-                        <td>950</td>
-                        <td>1600</td>
-                    </tr>
-                    <tr class="tablaCla">
-                        <th>Nutella</th>
-                        <td>480</td>
-                        <td>230</td>
-                        <td>1030</td>
-                        <td>1750</td>
-                    </tr>
-                    <tr class="tablaOsc">
-                        <th>Snickers</th>
-                        <td>480</td>
-                        <td>230</td>
-                        <td>1030</td>
-                        <td>1750</td>
-                </tr>
-                </table> 
-            </div>
-            <br>
+                <div class="container textosTopping__bloque--sexto">
+                    <h3>Chocolate</h3>
+                    <p>Frosting + Ganache de chocolate</p>
+                </div>
+                <div class="container textosTopping__bloque--sept">
+                    <h3>DDL</h3>
+                    <p>Frosting + Dulce de Leche</p>
+                </div>
+                <div class="container textosTopping__bloque--oct">
+                    <h3>Snickers</h3>
+                    <p>Frosting + Snickers casero</p>
+            </section>     
             <div>
                 <h3 id="pedidosEspeciales">Consultanos para pedidos especiales haciendo click <span><a href="contacto.html" id="pedidosAca">acá</a></span></h3>
             </div>
@@ -176,5 +122,9 @@
                 <h3 id="copyright">Copyright ® 2021 / CINNALOVERS</h3> 
         </footer>
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <script>
+            AOS.init();
+          </script>
     </body>
 </html>
