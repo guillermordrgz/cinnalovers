@@ -1,0 +1,294 @@
+/*VARIABLES*/
+
+$fondos: black;
+$textoBlanco: whitesmoke;
+$textoNegro: black;
+@mixin sizes ($ancho, $alto){
+    width: $ancho;
+    height: $alto;
+}
+
+/*BODY*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+}
+body{
+    background-color: whitesmoke;
+}
+/*HEADER*/
+header{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    background-color: $fondos;
+    div{
+        div{
+            div{
+                h1{
+                    color: $textoBlanco;
+                    font-weight: 600!important;
+                }
+            }
+        }
+    }
+}
+#logo{
+    max-width: 80px;
+}
+/*NAV*/
+/*LOGO WHATSAPP*/
+/* Cosito flotante de whatsapp*/
+.wsapp{
+    @include sizes(85px, 85px);
+    position:fixed;
+    left: 70%;
+    bottom: 20%;
+    border-radius: 50%;
+    z-index: 10;
+    opacity: 0.9;
+    transition: height 1s width 1s;
+}
+.wsapp:hover{
+    opacity: 1;
+    @include sizes(120px, 120px)
+}
+
+/*FOOTER*/
+footer{
+    background-color: $fondos;
+    padding-top: 10px;
+    div{
+        h3{
+            color: $textoBlanco;
+        }
+        nav{
+            ul{
+                list-style-type: none;
+                padding-left: 0;
+                a{
+                    text-decoration: none;
+                    color: $textoBlanco;
+                }
+            }
+        }
+    }
+}
+#elemento{
+	-webkit-filter: invert(1) ;
+	filter: invert(1) ;
+    @include sizes(80px, 80px)
+}
+#copyright{
+    text-align: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: whitesmoke;
+    padding-bottom: 10px;
+}
+/*INDEX*/
+
+/* Banner del index */
+.bannerContainer{
+    @include sizes(100%, 200px);
+    overflow: hidden;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    position: relative;
+    background-image: url(../images/cinnamonrolls1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+/*segundo box del index*/
+
+#segundoBoxIndex{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 7fr 3fr;
+    grid-template-areas:"comentario"
+                        "fotoDos";
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+}
+
+#cardIndex{
+    grid-area: comentario;
+}
+#fotoUno{
+    width: 180px;
+}
+#fotoDosTres{
+    grid-area: fotoDos;
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+#fotoDesktop{
+    width: 0;
+}
+#fotoDos{
+    width: 40%;
+}
+#fotoTres{
+    width: 40%;
+}
+
+/*MENU*/
+.textosTopping{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: repeat(16, 160px) ;
+    grid-template-areas: 
+    "f1"
+    "t1"
+    "f2"
+    "t2"
+    "f3"
+    "t3"
+    "f4"
+    "t4"
+    "f5"
+    "t5"
+    "f6"
+    "t6"
+    "f7"
+    "t7"
+    "f8"
+    "t8";
+    grid-row-gap: 5px;
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    color: $textoNegro;
+    text-align: center;
+
+    img{
+        width: 150px;
+        border-radius: 50%;
+    }
+}
+#toppingUno{
+    grid-area: f1;
+}
+#toppingDos{
+    grid-area: f2;
+}
+#toppingTres{
+    grid-area: f3;
+}
+#toppingCuatro{
+    grid-area: f4;
+}
+#toppingCinco{
+    grid-area: f5;
+}
+#toppingSeis{
+    grid-area: f6;
+}
+#toppingSiete{
+    grid-area: f7;
+}
+#toppingOcho{
+    grid-area: f8;
+}
+.textosTopping__bloque--primero{
+    grid-area: t1;
+}
+.textosTopping__bloque--segundo{
+    grid-area: t2;
+}
+.textosTopping__bloque--tercero{
+    grid-area: t3;
+}
+.textosTopping__bloque--cuarto{
+    grid-area: t4;
+}
+.textosTopping__bloque--quinto{
+    grid-area: t5;
+}
+.textosTopping__bloque--sexto{
+    grid-area: t6;
+}
+.textosTopping__bloque--sept{
+    grid-area: t7;
+}
+.textosTopping__bloque--oct{
+    grid-area: t8;
+}
+
+
+#pedidosEspeciales{
+    color: $textoNegro;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+#pedidosAca{
+    color: $textoNegro;
+}
+
+/*COMO PEDIR*/
+
+#grillaPasos{
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: 300px 200px 170px;
+    grid-template-areas: "lista"
+                        "foto2" 
+                        "texto";
+    align-items: center;
+    justify-items: center;
+    overflow: hidden;
+    margin-bottom: 25px;
+    
+    img{
+        max-height: 200px;
+    }
+}
+
+.listaPasos{
+    grid-area: lista;
+    list-style: disc;
+    li{
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+}
+#fotoPasos1{
+    grid-area: foto1;
+    width: 0;
+}
+#fotoPasos2{
+    grid-area: foto2;
+}
+#textoPasos{
+    grid-area: texto;
+    width: 60%;
+}
+/*SOBRE NOSOTROS*/
+.carousel-item{
+    max-height: 600px;
+    max-width: 400px;
+}
+.carousel-inner{
+    max-width: 400px;
+}
+/*CONTACTO*/
+
+#submit{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+label{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+input{
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+@import "mediaQueries";

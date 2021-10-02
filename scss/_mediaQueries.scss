@@ -1,0 +1,125 @@
+@media only screen and (min-width:768px){
+    /*HEADER*/
+    #logo{
+        max-width: 120px;
+    }
+    /*FOOTER*/
+    #elemento{
+        position: relative;
+        right: 9.8%;
+    }
+    /*INDEX*/
+    #segundoBoxIndex{
+    grid-template-rows: 300px 350px;
+    }
+    #fotoDos{
+        max-width: 300px;
+    }
+    #fotoTres{
+        max-width: 300px;
+    }
+    /*MENU*/
+    .textosTopping{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: 50% 50%;
+        grid-template-rows: 200px 100px 200px 100px 200px 100px 200px 100px ;
+        grid-template-areas: 
+        "f1 f2"
+        "t1 t2"
+        "f3 f4"
+        "t3 t4"
+        "f5 f6"
+        "t5 t6"
+        "f7 f8"
+        "t7 t8";
+        grid-row-gap: 10px;
+        margin-bottom: 20px;
+        align-items: flex-start;
+        img{
+            @include sizes (200px, 200px);
+        }
+    }
+}
+@media only screen and (min-width:1024px) {
+    /*HEADER*/
+    #logo{
+        max-width: 150px;
+    }
+
+    /* Cosito flotante de whatsapp*/
+    .wsapp{
+        left: 90%;
+        bottom: 15%;
+        @include sizes (100px, 100px);
+        }
+
+    /*INDEX*/
+    .bannerContainer{
+        margin-top: 40px;
+        height: 400px;
+    }
+    /*SEGUNDO BOX INDEX*/
+    #segundoBoxIndex{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 300px 500px;
+        grid-template-areas:"comentario comentario"
+                            "fotoDos fotoDos";
+        align-items: center;
+        justify-items: center;
+    }
+
+    #fotoDosTres{
+        height: 100%;
+        justify-content: space-around;
+        align-items: center;
+        width: 100% ;
+    }
+    #fotoDos{
+        width: 300px;
+        }
+    #fotoDesktop{
+        width: 300px;
+    }
+    #fotoTres{
+        width: 300px;
+        }
+    /*GRID TOPPINGS*/
+    .textosTopping{
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 220px 130px 220px 130px;
+        grid-template-areas: 
+        "f1 f2 f3 f4"
+        "t1 t2 t3 t4"
+        "f5 f6 f7 f8"
+        "t5 t6 t7 t8";
+        grid-row-gap: 10px;
+        margin-bottom: 20px;
+        align-items: center;
+        img{
+            transition: height 1s width 1s; 
+        }
+        img:hover{
+        height: 220px;
+        width: 220px;
+        }
+    }
+    /*COMO PEDIR*/
+    #grillaPasos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "lista foto1"
+                            "foto2 texto";
+        img{
+            width: 80%;
+            border-radius: 10%;
+            max-height: none;
+        }
+    }
+    #fotoPasos1{
+        grid-area: foto1;
+        width: 80%;
+    }
+    .listaPasos{
+        font-weight: 600;
+    }
+}
