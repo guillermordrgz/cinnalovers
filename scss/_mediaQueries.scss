@@ -10,7 +10,7 @@
     }
     /*INDEX*/
     #segundoBoxIndex{
-    grid-template-rows: 300px 350px;
+    grid-template-rows: 300px 210px 380px;
     }
     #fotoDos{
         max-width: 300px;
@@ -39,6 +39,25 @@
             @include sizes (200px, 200px);
         }
     }
+    /*COMO PEDIR*/
+    #grillaPasos{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-template-areas: "lista foto1"
+                            "foto2 texto";
+        img{
+            border-radius: 10%;
+            max-height: none;
+            width: 80%;
+        }
+    }
+    #fotoPasos1{
+        grid-area: foto1;
+        width: 80%;
+    }
+    .listaPasos{
+        font-weight: 400;
+    }
 }
 @media only screen and (min-width:1024px) {
     /*HEADER*/
@@ -61,8 +80,9 @@
     /*SEGUNDO BOX INDEX*/
     #segundoBoxIndex{
         grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: 300px 500px;
+        grid-template-rows: 300px 200px 480px;
         grid-template-areas:"comentario comentario"
+                            "parrafo parrafo"
                             "fotoDos fotoDos";
         align-items: center;
         justify-items: center;
@@ -83,6 +103,7 @@
     #fotoTres{
         width: 300px;
         }
+    
     /*GRID TOPPINGS*/
     .textosTopping{
         grid-template-columns: repeat(4, 1fr);
@@ -102,24 +123,5 @@
         height: 220px;
         width: 220px;
         }
-    }
-    /*COMO PEDIR*/
-    #grillaPasos{
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
-        grid-template-areas: "lista foto1"
-                            "foto2 texto";
-        img{
-            width: 80%;
-            border-radius: 10%;
-            max-height: none;
-        }
-    }
-    #fotoPasos1{
-        grid-area: foto1;
-        width: 80%;
-    }
-    .listaPasos{
-        font-weight: 600;
     }
 }

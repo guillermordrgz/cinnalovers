@@ -41,6 +41,7 @@ header {
 
 /*FOOTER*/
 footer {
+  margin-top: 25px;
   background-color: black;
   padding-top: 10px; }
   footer div h3 {
@@ -63,7 +64,8 @@ footer {
   font-size: 0.8rem;
   font-weight: 600;
   color: whitesmoke;
-  padding-bottom: 10px; }
+  padding-bottom: 10px;
+  margin-bottom: 0; }
 
 /*INDEX*/
 /* Banner del index */
@@ -74,7 +76,7 @@ footer {
   margin-top: 25px;
   margin-bottom: 15px;
   position: relative;
-  background-image: url(../images/cinnamonrolls1.jpg);
+  background-image: url(../images/cinnamonBanner.jpg);
   background-size: cover;
   background-position: center; }
 
@@ -82,14 +84,17 @@ footer {
 #segundoBoxIndex {
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 7fr 3fr;
-  grid-template-areas: "comentario" "fotoDos";
+  grid-template-rows: 450px 210px 210px;
+  grid-template-areas: "comentario" "parrafo" "fotoDos";
   align-items: center;
   justify-items: center;
   overflow: hidden; }
 
 #cardIndex {
   grid-area: comentario; }
+
+#parrafoIndex {
+  grid-area: parrafo; }
 
 #fotoUno {
   width: 180px; }
@@ -109,6 +114,14 @@ footer {
 
 #fotoTres {
   width: 40%; }
+
+/*Tercer box index*/
+.nuestrosToppings {
+  background-image: url(../images/cinnamonrolls1.jpg);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  height: 120px; }
 
 /*MENU*/
 .textosTopping {
@@ -244,7 +257,7 @@ input {
     right: 9.8%; }
   /*INDEX*/
   #segundoBoxIndex {
-    grid-template-rows: 300px 350px; }
+    grid-template-rows: 300px 210px 380px; }
   #fotoDos {
     max-width: 300px; }
   #fotoTres {
@@ -260,7 +273,21 @@ input {
     align-items: flex-start; }
     .textosTopping img {
       width: 200px;
-      height: 200px; } }
+      height: 200px; }
+  /*COMO PEDIR*/
+  #grillaPasos {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas: "lista foto1" "foto2 texto"; }
+    #grillaPasos img {
+      border-radius: 10%;
+      max-height: none;
+      width: 80%; }
+  #fotoPasos1 {
+    grid-area: foto1;
+    width: 80%; }
+  .listaPasos {
+    font-weight: 400; } }
 
 @media only screen and (min-width: 1024px) {
   /*HEADER*/
@@ -279,8 +306,8 @@ input {
   /*SEGUNDO BOX INDEX*/
   #segundoBoxIndex {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: 300px 500px;
-    grid-template-areas: "comentario comentario" "fotoDos fotoDos";
+    grid-template-rows: 300px 200px 480px;
+    grid-template-areas: "comentario comentario" "parrafo parrafo" "fotoDos fotoDos";
     align-items: center;
     justify-items: center; }
   #fotoDosTres {
@@ -306,18 +333,4 @@ input {
       transition: height 1s width 1s; }
     .textosTopping img:hover {
       height: 220px;
-      width: 220px; }
-  /*COMO PEDIR*/
-  #grillaPasos {
-    grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-areas: "lista foto1" "foto2 texto"; }
-    #grillaPasos img {
-      width: 80%;
-      border-radius: 10%;
-      max-height: none; }
-  #fotoPasos1 {
-    grid-area: foto1;
-    width: 80%; }
-  .listaPasos {
-    font-weight: 600; } }
+      width: 220px; } }
