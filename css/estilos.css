@@ -88,7 +88,8 @@ footer {
   grid-template-areas: "comentario" "parrafo" "fotoDos";
   align-items: center;
   justify-items: center;
-  overflow: hidden; }
+  overflow: hidden;
+  margin-bottom: 20px; }
 
 #cardIndex {
   grid-area: comentario; }
@@ -287,7 +288,7 @@ input {
     grid-area: foto1;
     width: 80%; }
   .listaPasos {
-    font-weight: 400; } }
+    font-weight: 600; } }
 
 @media only screen and (min-width: 1024px) {
   /*HEADER*/
