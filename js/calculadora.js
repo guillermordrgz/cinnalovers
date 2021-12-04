@@ -8,6 +8,7 @@ if (cantidadRolls >= 3){
     descuento = 0.85
 } else{
     alert("No tienes descuento, son a partir de 3")
+    descuento = 1
 }
 
 if (cantidadRolls >= 6){
