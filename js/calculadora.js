@@ -19,6 +19,9 @@ function resultado(){
     let subtotal = precioMaxis * cantidadRolls;
     let total = subtotal * descuento;
     let ahorro = subtotal - total;
-    alert("Tienes un descuento de $" + ahorro + ", tu total es $" + total)
+    let porcentaje = (1 - descuento) * 100
+    parseInt(porcentaje)
+    console.log(porcentaje)
+    alert("Tienes un descuento de " + porcentaje + "% ($" + ahorro + "), tu total es $" + total)
 }
 resultado()
