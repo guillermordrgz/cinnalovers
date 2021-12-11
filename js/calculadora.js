@@ -7,7 +7,7 @@ function resultado(){
     let ahorro = subtotal - total;
     var porcentaje = (1 - descuento) * 100;
     var porcentaje = Math.round(porcentaje)
-    console.log(porcentaje)
+    console.log(`${porcentaje} porciento de descuento`)
     alert("Tienes un descuento de " + porcentaje + "% ($" + ahorro + "), tu total es $" + total)
 }
 
@@ -18,21 +18,19 @@ while (isNaN(cantidadRolls) || cantidadRolls.lenght == 0 || cantidadRolls === 0)
 
 if (cantidadRolls >= 3){
     descuento = 0.85;
-    resultado()
-} else{}
+}
 
 if(cantidadRolls === 1 || cantidadRolls === 2){
     alert("No tienes descuento, son a partir de 3 :(");
     descuento = 1
-    resultado()
-} else{}
+}
 
 if (cantidadRolls >= 6){
     descuento = 0.80;
-    resultado()
-} else{}
+} 
 
 if (cantidadRolls >=12){
     descuento = 0.75;
-    resultado()
-} else{}
+}
+
+resultado()
