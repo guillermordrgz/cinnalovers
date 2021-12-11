@@ -47,10 +47,11 @@ class Producto {
 const rollClasico = new Producto(1, 'Roll Clásico', 230, 100, true);
 const rollNutella = new Producto(2, 'Roll Nutella', 280, 50, true);
 const rollDulce = new Producto(3, 'Roll DDL', 260, 100, true);
-const rollPecan = new Producto(4, 'Roll Caramel & Pecans', 50, 270, true);
-const rollManzana = new Producto(5, 'Roll Manzana', 1, 50, true);
-const rollFrutos = new Producto(6, 'Roll Frutos Rojos', 1, 100, true);
-const rollChoco = new Producto(7, 'Roll Chocolate', 1, 100, true);
+const rollPecan = new Producto(4, 'Roll Caramel & Pecans', 270, 50, true);
+const rollManzana = new Producto(5, 'Roll Manzana', 270, 50, true);
+const rollFrutos = new Producto(6, 'Roll Frutos Rojos', 270, 100, true);
+const rollChoco = new Producto(7, 'Roll Chocolate', 260, 100, true);
+const rollPerso = new Producto(8, prompt('Personaliza tu roll'), 280, 1, true)
 
 const carrito = new Carrito ([])
 carrito.createItem (rollClasico)
@@ -60,5 +61,8 @@ carrito.createItem (rollPecan)
 carrito.createItem (rollManzana)
 carrito.createItem (rollFrutos)
 carrito.createItem (rollChoco)
+carrito.createItem (rollPerso)
 
 console.log( carrito.findAllItems() )
+alert("Tu roll personalizado es " + rollPerso.getNombre())
+console.log( rollPerso.getNombre() )
