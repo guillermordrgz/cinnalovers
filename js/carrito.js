@@ -12,49 +12,49 @@ const rollClasico = new Producto(
   "Roll Clásico",
   230,
   100,
-  "./images/toppings/toppingClasico.jpg"
+  "../images/toppings/toppingClasico.jpg"
 );
 const rollNutella = new Producto(
   2,
   "Roll Nutella",
   280,
   50,
-  "./images/toppings/toppingNutella.jpg"
+  "../images/toppings/toppingNutella.jpg"
 );
 const rollDulce = new Producto(
   3,
   "Roll DDL",
   260,
   100,
-  "./images/toppings/toppingDulce.jpg"
+  "../images/toppings/toppingDulce.jpg"
 );
 const rollPecan = new Producto(
   4,
   "Roll Caramel & Pecans",
   270,
   50,
-  "./images/toppings/toppingPecan.jpg"
+  "../images/toppings/toppingPecan.jpg"
 );
 const rollManzana = new Producto(
   5,
   "Roll Manzana",
   270,
   50,
-  "./images/toppings/toppingManzana.jpg"
+  "../images/toppings/toppingManzana.jpg"
 );
 const rollFrutos = new Producto(
   6,
   "Roll Frutos Rojos",
   270,
   100,
-  "./images/toppings/toppingFrutos.jpg"
+  "../images/toppings/toppingFrutos.jpg"
 );
 const rollChoco = new Producto(
   7,
   "Roll Chocolate",
   260,
   100,
-  "./images/toppings/toppingChoco.jpg"
+  "../images/toppings/toppingChoco.jpg"
 );
 
 let misProductos = [];
@@ -68,6 +68,8 @@ misProductos.push(
   rollFrutos,
   rollChoco
 );
+
+localStorage.setItem("productos", JSON.stringify(misProductos))
 
 let contenedorProductos = document.getElementById("productos");
 
@@ -175,10 +177,18 @@ producto7.addEventListener("click", function producto7() {
     " - $ " +
     misProductos[6].precio +
     "</li>";
+
+    
   for (let i = 0; i <= lista.children.length - 1; i++) {
     lista.children[i].addEventListener("click", eliminarProducto);
   }
 });
 let eliminarProducto = function eliminarProducto() {
-    this.parentNode.removeChild(this);
-}
+  this.parentNode.removeChild(this);
+};
+
+let vaciar = document.getElementById("vaciar");
+vaciar.addEventListener("click", function vaciarCarrito() {
+  document.getElementById("lista").innerHTML = null;
+  localStorage.clear();
+})

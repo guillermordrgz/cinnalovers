@@ -1,11 +1,11 @@
 {
   "name": "proyectofinal",
   "version": "1.0.0",
-  "description": "",
+  "description": "Desarrollo de sitio web para *CINNALOVERS®* desarrollado en HTML usando Bootstrap y SASS para asignar estilos.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build-css":"node-sass --include-path scss scss/estilos.scss css/estilos.css",
+    "build-css": "node-sass --include-path scss scss/estilos.scss css/estilos.css",
     "watch-css": "nodemon -e scss -x \"npm run build-css\""
   },
   "repository": {
@@ -20,6 +20,6 @@
   "homepage": "https://github.com/guillermordrgz/cinnalovers#readme",
   "devDependencies": {
     "node-sass": "^6.0.1",
-    "nodemon": "^2.0.13"
+    "nodemon": "^2.0.15"
   }
 }
